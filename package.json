@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run-script browser_test && npm run-script all-test",
+    "test": "npm run-script mocha",
     "all-test": "npm run-script jshint && npm run-script jscs && npm run-script test && npm run-script coverage",
     "browser_test": "npm run-script generate_loader && npm run-script bundle",
     "mocha": "node_modules\\.bin\\mocha -u tdd -R spec -r tests/setup_jsdom.js tests/**/*.js",
