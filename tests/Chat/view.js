@@ -30,6 +30,15 @@ suite('testing chat view', function() {
 		});
 	});
 
+	test('test validation of 0 characters', function() {
+		assert.isFalse(this.chat.validateMessage(''));
+	});
+
+	test('test validation of 41 characters', function() {
+		msg = new Array(42).join('a');
+		assert.isFalse(this.chat.validateMessage(msg));
+	});
+
 	test('test send button click', function() {
 		this.chat.$(this.chat.ui.sendBtn).trigger('click');
 		assert.isTrue(this.chat.onSendClick.calledOnce);
