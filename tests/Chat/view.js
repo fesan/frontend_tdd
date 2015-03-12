@@ -35,7 +35,7 @@ suite('testing chat view', function() {
 	});
 
 	test('test validation of 41 characters', function() {
-		msg = new Array(42).join('a');
+		var msg = new Array(42).join('a');
 		assert.isFalse(this.chat.validateMessage(msg));
 	});
 
